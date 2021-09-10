@@ -1,0 +1,31 @@
+﻿<Window x:Class="SignUp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SignUp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Sign Up" Height="600" Width="800">
+    <Grid Background="Silver">
+        <Border MinWidth="400" MaxWidth="550" Margin="15" Background="WhiteSmoke" VerticalAlignment="Center" Padding="30" CornerRadius="25">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="Black" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Hi!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Sign up"/>
+                    <Button HorizontalAlignment="Right" Content="Sign in" Click="Button_Click_SignIn" Style="{StaticResource MaterialDesignRaisedLightButton}"/>
+                </Grid>
+
+                <TextBox x:Name="EmailTextBox" materialDesign:HintAssist.Hint="Enter your email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="PassTextBox" materialDesign:HintAssist.Hint="Create a password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="PassTextBox2" materialDesign:HintAssist.Hint="Check password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox x:Name="LoginTextBox" materialDesign:HintAssist.Hint="Enter a username" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button Content="Create account" Margin="0, 20" Click="Button_Click_Reg"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
